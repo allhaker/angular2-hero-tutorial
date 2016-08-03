@@ -15,9 +15,7 @@ import { HeroService } from './hero.service';
 
 export class HeroesComponent implements OnInit {
     selectedHero: Hero;
-    addingHero: boolean;
     public heroes: Hero[];
-    error: any;
 
     constructor(
         private router: Router,
@@ -37,15 +35,4 @@ export class HeroesComponent implements OnInit {
     }
 
     onSelect(hero: Hero) { this.selectedHero = hero; }
-
-    addHero() {
-        this.addingHero = true;
-        this.selectedHero = null;
-    }
-
-    close(savedHero: Hero) {
-        this.addingHero = false;
-        if (savedHero) { this.getHeroes(); }
-    }
-
 }
