@@ -1,4 +1,5 @@
 .idea
+.DS_Store
 typings/**
 node_modules
 jspm_packages
